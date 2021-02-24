@@ -1,4 +1,5 @@
 from base.baseMainWindow import Ui_MainWindow
+from tools.system_tools import screen_shot_save_qt
 
 
 class MainWindow(Ui_MainWindow):
@@ -14,7 +15,7 @@ class MainWindow(Ui_MainWindow):
         """
         初始化界面的各个控件
         """
-        self.cutButton.clicked.connect(self.cutScreen)
+        self.beginTranslateButton.clicked.connect(self.cutScreen)
 
     def cutScreen(self):
-        print("截图按钮被点击")
+        screen_shot_save_qt("./1.png")
