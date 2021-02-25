@@ -1,7 +1,6 @@
 from PyQt5.QtWidgets import QApplication
 from PyQt5.Qt import QRect
 from PyQt5 import QtCore
-import base64
 
 
 def screen_shot_qt():

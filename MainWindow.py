@@ -4,6 +4,7 @@ from tools.str_tools import *
 from PyQt5 import QtCore
 from PyQt5.Qt import QCursor, QMessageBox
 from api.BaiduOCR import *
+from ResultWidget import ResultWidget
 
 
 class MainWindow(Ui_MainWindow):
@@ -31,7 +32,7 @@ class MainWindow(Ui_MainWindow):
         """
         初始化界面的各个控件
         """
-        self.beginTranslateButton.clicked.connect(self.cutScreen)
+        self.beginTranslateButton.clicked.connect(self.create_result_widget)
 
     def updateUI(self):
         self.updateMousePos()
@@ -64,3 +65,9 @@ class MainWindow(Ui_MainWindow):
         # 调用OCR接口识别文字
         res = get_ocr_result(img)
         print(res)
+
+    def create_result_widget(self):
+        """
+        创建显示翻译结果的widget
+        """
+        self.resultWidget = ResultWidget()
