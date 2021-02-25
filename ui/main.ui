@@ -27,7 +27,7 @@
      <string>当前鼠标位置：</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="MousePos">
     <property name="geometry">
      <rect>
       <x>150</x>
@@ -122,7 +122,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="rightDownXEdit_2">
+   <widget class="QLineEdit" name="rightDownYEdit">
     <property name="geometry">
      <rect>
       <x>470</x>
