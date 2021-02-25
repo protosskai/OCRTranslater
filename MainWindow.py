@@ -5,7 +5,7 @@ from base.baseMainWindow import Ui_MainWindow
 from tools.system_tools import *
 from tools.str_tools import *
 from PyQt5 import QtCore
-from PyQt5.Qt import QCursor, QMessageBox, QMainWindow
+from PyQt5.Qt import QCursor, QMessageBox, QMainWindow, QIcon
 from api.BaiduOCR import *
 from ResultWidget import ResultWidget
 from api.BaiduTranslate import *
@@ -47,6 +47,8 @@ class MainWindow(Ui_MainWindow, QMainWindow):
         """
         初始化界面的各个控件
         """
+        icon = QIcon("./cute.ico")
+        self.setWindowIcon(icon)
         self.beginTranslateButton.clicked.connect(self.startTranslate)
         self.stopTranslateButton.clicked.connect(self.stopTranslate)
 
