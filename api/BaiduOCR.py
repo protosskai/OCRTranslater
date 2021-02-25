@@ -2,8 +2,35 @@
 import requests
 import base64
 
+"""
+语言类型：
+- CHN_ENG：中英文混合
+- ENG：英文
+- JAP：日语
+- KOR：韩语
+- FRE：法语
+- SPA：西班牙语
+- POR：葡萄牙语
+- GER：德语
+- ITA：意大利语
+- RUS：俄语
+"""
+
 api_key = ""
 secret_key = ""
+
+ocr_map = {
+    "汉语": "CHN_ENG",
+    "英文": "ENG",
+    "日语": "JAP",
+    "韩语": "KOR",
+    "法语": "FRE",
+    "西班牙语": "SPA",
+    "葡萄牙语": "POR",
+    "德语": "GER",
+    "意大利语": "ITA",
+    "俄语": "RUS"
+}
 
 
 def get_access_token(api_key, secret_key, re_generate=False):
@@ -48,7 +75,7 @@ def get_ocr_result_from_file(img_path):
         return response.json()
 
 
-def get_ocr_result(img):
+def get_ocr_result(img, type):
     '''
     通用文字识别， 直接传入图片base64编码后的字符串
     '''
@@ -56,7 +83,7 @@ def get_ocr_result(img):
     request_url = "https://aip.baidubce.com/rest/2.0/ocr/v1/general_basic"
     params = {
         "image": img,
-        "language_type": "JAP"
+        "language_type": type
     }
     request_url = request_url + "?access_token=" + access_token
     headers = {'content-type': 'application/x-www-form-urlencoded'}

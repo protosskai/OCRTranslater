@@ -15,9 +15,9 @@ class Ui_ResultWidget(object):
     def setupUi(self, ResultWidget):
         ResultWidget.setObjectName("ResultWidget")
         ResultWidget.resize(683, 244)
-        self.ResultLabel = QtWidgets.QLabel(ResultWidget)
-        self.ResultLabel.setGeometry(QtCore.QRect(20, 30, 631, 191))
-        self.ResultLabel.setObjectName("ResultLabel")
+        self.resultLabel = QtWidgets.QLabel(ResultWidget)
+        self.resultLabel.setGeometry(QtCore.QRect(20, 30, 631, 191))
+        self.resultLabel.setObjectName("resultLabel")
 
         self.retranslateUi(ResultWidget)
         QtCore.QMetaObject.connectSlotsByName(ResultWidget)
@@ -25,7 +25,7 @@ class Ui_ResultWidget(object):
     def retranslateUi(self, ResultWidget):
         _translate = QtCore.QCoreApplication.translate
         ResultWidget.setWindowTitle(_translate("ResultWidget", "翻译结果"))
-        self.ResultLabel.setText(_translate("ResultWidget", "无"))
+        self.resultLabel.setText(_translate("ResultWidget", "无"))
 
 
 if __name__ == "__main__":

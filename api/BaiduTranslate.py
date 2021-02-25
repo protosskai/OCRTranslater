@@ -1,19 +1,20 @@
 import requests
 import json
 
-"""
-语言类型：
-- CHN_ENG：中英文混合
-- ENG：英文
-- JAP：日语
-- KOR：韩语
-- FRE：法语
-- SPA：西班牙语
-- POR：葡萄牙语
-- GER：德语
-- ITA：意大利语
-- RUS：俄语
-"""
+
+
+translate_lang_map = {
+    "汉语": "zh",
+    "英文": "en",
+    "日语": "jp",
+    "韩语": "kor",
+    "法语": "fra",
+    "西班牙语": "spa",
+    "葡萄牙语": "pt",
+    "德语": "de",
+    "意大利语": "it",
+    "俄语": "ru"
+}
 
 
 def get_translate_result(query_str, from_lang, to_lang):

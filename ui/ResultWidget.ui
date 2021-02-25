@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>翻译结果</string>
   </property>
-  <widget class="QLabel" name="ResultLabel">
+  <widget class="QLabel" name="resultLabel">
    <property name="geometry">
     <rect>
      <x>20</x>

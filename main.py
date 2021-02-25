@@ -4,7 +4,7 @@ import sys
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
-    mainWindow = QtWidgets.QMainWindow()
-    ui = MainWindow(mainWindow)
-    mainWindow.show()
+    ui = MainWindow(app)
+    ui.show()
+    app.setQuitOnLastWindowClosed(True)
     sys.exit(app.exec_())
